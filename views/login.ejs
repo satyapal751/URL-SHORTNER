@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 350px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input[type="email"], 
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #4CAF50;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    .login-container p {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .login-container p a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+
+    .login-container p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form action="/user/login" method="POST">
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" placeholder="Enter Email" required />
+
+      <label for="password">Password</label>
+      <input id="password" type="password" name="password" placeholder="Enter Password" required />
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>
